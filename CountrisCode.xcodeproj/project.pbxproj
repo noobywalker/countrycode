@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24D38B960C82726BE006F725 /* Pods_CountrisCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692A1A87DEB67C8BDE294B3A /* Pods_CountrisCode.framework */; };
 		C29129C31DB7B14000415807 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29129C21DB7B14000415807 /* AppDelegate.swift */; };
 		C29129C51DB7B14000415807 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29129C41DB7B14000415807 /* ViewController.swift */; };
 		C29129C81DB7B14000415807 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29129C61DB7B14000415807 /* Main.storyboard */; };
 		C29129CA1DB7B14000415807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C29129C91DB7B14000415807 /* Assets.xcassets */; };
 		C29129CD1DB7B14000415807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29129CB1DB7B14000415807 /* LaunchScreen.storyboard */; };
+		C29129D51DB7B34000415807 /* CountryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29129D41DB7B34000415807 /* CountryAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		692A1A87DEB67C8BDE294B3A /* Pods_CountrisCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountrisCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1F124567C765E2CB97EDAF4 /* Pods-CountrisCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountrisCode.release.xcconfig"; path = "Pods/Target Support Files/Pods-CountrisCode/Pods-CountrisCode.release.xcconfig"; sourceTree = "<group>"; };
+		B4F29FCEEBE6397D55993DD9 /* Pods-CountrisCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountrisCode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CountrisCode/Pods-CountrisCode.debug.xcconfig"; sourceTree = "<group>"; };
 		C29129BF1DB7B14000415807 /* CountrisCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountrisCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29129C21DB7B14000415807 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C29129C41DB7B14000415807 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		C29129C91DB7B14000415807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C29129CC1DB7B14000415807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C29129CE1DB7B14000415807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C29129D41DB7B34000415807 /* CountryAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24D38B960C82726BE006F725 /* Pods_CountrisCode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61208B00809CC87DA11C901D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				692A1A87DEB67C8BDE294B3A /* Pods_CountrisCode.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8BDE25F5EBDBE54A2709AA20 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4F29FCEEBE6397D55993DD9 /* Pods-CountrisCode.debug.xcconfig */,
+				B1F124567C765E2CB97EDAF4 /* Pods-CountrisCode.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C29129B61DB7B14000415807 = {
 			isa = PBXGroup;
 			children = (
 				C29129C11DB7B14000415807 /* CountrisCode */,
 				C29129C01DB7B14000415807 /* Products */,
+				8BDE25F5EBDBE54A2709AA20 /* Pods */,
+				61208B00809CC87DA11C901D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +86,7 @@
 				C29129C91DB7B14000415807 /* Assets.xcassets */,
 				C29129CB1DB7B14000415807 /* LaunchScreen.storyboard */,
 				C29129CE1DB7B14000415807 /* Info.plist */,
+				C29129D41DB7B34000415807 /* CountryAPI.swift */,
 			);
 			path = CountrisCode;
 			sourceTree = "<group>";
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C29129D11DB7B14000415807 /* Build configuration list for PBXNativeTarget "CountrisCode" */;
 			buildPhases = (
+				DE2D89CA522A1FD304371585 /* [CP] Check Pods Manifest.lock */,
 				C29129BB1DB7B14000415807 /* Sources */,
 				C29129BC1DB7B14000415807 /* Frameworks */,
 				C29129BD1DB7B14000415807 /* Resources */,
+				D92E8DDC4EE5EAE166880D0A /* [CP] Embed Pods Frameworks */,
+				B7C876724564107EA051A888 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,11 +161,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B7C876724564107EA051A888 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CountrisCode/Pods-CountrisCode-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D92E8DDC4EE5EAE166880D0A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CountrisCode/Pods-CountrisCode-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE2D89CA522A1FD304371585 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C29129BB1DB7B14000415807 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C29129D51DB7B34000415807 /* CountryAPI.swift in Sources */,
 				C29129C51DB7B14000415807 /* ViewController.swift in Sources */,
 				C29129C31DB7B14000415807 /* AppDelegate.swift in Sources */,
 			);
@@ -256,6 +335,7 @@
 		};
 		C29129D21DB7B14000415807 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4F29FCEEBE6397D55993DD9 /* Pods-CountrisCode.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CountrisCode/Info.plist;
@@ -268,6 +348,7 @@
 		};
 		C29129D31DB7B14000415807 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1F124567C765E2CB97EDAF4 /* Pods-CountrisCode.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CountrisCode/Info.plist;
@@ -297,6 +378,7 @@
 				C29129D31DB7B14000415807 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
